@@ -1,3 +1,30 @@
+button,
+.btn {
+  font-weight: bold;
+  border: none;
+  transition: background-color 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  margin: 1rem;
+  padding: 1.5rem;
+  border: none;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.1);
+}
+
 * {
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
@@ -10,28 +37,31 @@ body {
   padding: 0;
   background-color: #fefae0;
   color: #2b2b2b;
-  display: flex;
-  flex-direction: column;
 }
 
 body {
-  flex: 1;
-}
-
-main {
-  flex: 1 0 auto;
-  padding-top: 7rem;
-  padding-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-top: 5rem;
 }
 @media (max-width: 991.98px) and (min-width: 769px) {
-  main {
+  body {
     padding-top: 10rem;
   }
 }
 @media (max-width: 768px) {
-  main {
-    padding-top: 8rem;
+  body {
+    padding-top: 7rem;
   }
+}
+
+main {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: 70px;
+  padding-bottom: 3rem;
 }
 
 nav {
@@ -39,6 +69,7 @@ nav {
   top: 0;
   width: 100%;
   height: 70px;
+  z-index: 1000;
 }
 
 .navbar {
@@ -50,6 +81,17 @@ nav {
 }
 .navbar .nav-link:hover {
   color: #ce8c3d !important;
+}
+.navbar .navbar-collapse {
+  background-color: #55954c;
+}
+@media (max-width: 991.98px) {
+  .navbar .navbar-collapse {
+    padding: 1rem;
+  }
+}
+.navbar .navbar-collapse .nav-link {
+  color: #ffffff;
 }
 .navbar .navbar-brand img {
   width: 3.5rem;
@@ -84,22 +126,6 @@ nav {
   transition: transform 0.3s ease;
 }
 
-.imgLogin {
-  width: 3rem;
-}
-
-.menuList li {
-  list-style: none;
-}
-.menuList li a {
-  text-decoration: none;
-  color: #ffffff;
-  font-weight: 600;
-}
-.menuList li a:hover {
-  color: #ce8c3d;
-}
-
 h1,
 h2 {
   color: #55954c;
@@ -120,23 +146,6 @@ button:hover,
   color: #ffffff;
 }
 
-.card {
-  background-color: #ffffff;
-  border-radius: 1rem;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
-  transition: all 0.3s ease;
-  margin: 1rem;
-  padding: 1.5rem;
-  border: none;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.1);
-}
 .card .card-img-top {
   height: 150px;
   object-fit: cover;
@@ -147,34 +156,29 @@ button:hover,
 .card .card-body {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding: 1rem;
-  height: 100%;
+  gap: 1rem;
 }
-.card .card-body h5 {
-  font-weight: 600;
-  margin-bottom: 0.75rem;
+.card .card-body a:not(.btn) {
   color: #55954c;
-}
-.card .card-body p {
-  flex-grow: 1;
-  font-size: 0.9rem;
-  margin-bottom: 1rem;
-}
-.card .card-body a {
-  align-self: start;
   text-decoration: none;
   font-weight: 500;
-  color: #ffffff;
-  background-color: #55954c;
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  transition: all 0.3s;
 }
-.card .card-body a:hover {
-  background-color: #ce8c3d;
-  color: #ffffff;
-  text-decoration: none;
+.card .card-body a:not(.btn):hover {
+  text-decoration: underline;
+  color: #ce8c3d;
+}
+.card .card-body .card-title {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #55954c;
+  text-align: center;
+}
+.card .card-body .card-text {
+  font-size: 0.95rem;
+  text-align: justify;
+}
+.card .card-body .btn {
+  align-self: center;
 }
 
 @media (max-width: 576px) {
@@ -205,6 +209,13 @@ button:hover,
 .imgNews img,
 .imgLoginPrincipal img {
   width: 100%;
+}
+
+.irGremio li,
+.irGremio li a,
+.irNoticia li,
+.irNoticia li a {
+  text-align: center;
 }
 
 .irGremio li a {
@@ -257,6 +268,14 @@ footer {
   flex-shrink: 0;
   color: #ffffff;
 }
+footer .menuFooter .row .col a img {
+  width: 2rem;
+  height: 2rem;
+  transition: transform 0.2s;
+}
+footer .menuFooter .row .col a img:hover {
+  transform: scale(1.1);
+}
 footer ul {
   margin: 0;
   padding: 0;
@@ -265,14 +284,6 @@ footer li {
   display: inline-block;
   margin-right: 1rem;
   list-style: none;
-}
-footer img {
-  width: 2rem;
-  height: 2rem;
-  transition: transform 0.2s;
-}
-footer img:hover {
-  transform: scale(1.1);
 }
 footer a {
   color: #ffffff;
