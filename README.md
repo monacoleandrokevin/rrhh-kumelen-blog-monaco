@@ -27,7 +27,7 @@ Este proyecto es una plataforma web desarrollada para la gestión de recursos hu
 ```
 ├── index.html
 ├── pages/
-│   ├── attendancenews.html
+│   ├── attendance.html
 │   ├── contact.html
 │   ├── login.html
 │   └── news.html
