@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,12 +7,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
       rel="stylesheet"
     />
     <!--BOOTSTRAP-->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -21,7 +19,7 @@
     />
     <!--CSS-->
     <link rel="stylesheet" href="../css/style.css" />
-    <title>RRHH Kumelen Escuela - Login</title>
+    <title>RRHH Kumelen Escuela - Contacto</title>
   </head>
   <body>
     <header>
@@ -32,7 +30,6 @@
               <img src="../images/logo.png" alt="Kumelen" />
             </div>
           </a>
-
           <button
             class="navbar-toggler ms-auto"
             type="button"
@@ -44,19 +41,13 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item">
                 <a class="nav-link" href="../index.html">Inicio</a>
               </li>
               <li class="nav-item">
-                <a
-                  class="nav-link"
-                  aria-current="page"
-                  href="../pages/news.html"
-                  >Noticias</a
-                >
+                <a class="nav-link" href="../pages/news.html">Noticias</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="../pages/attendance.html"
@@ -68,48 +59,56 @@
                   >Contacto</a
                 >
               </li>
-              <li class="nav-item login">
-                <a class="nav-link active" href="../pages/login.html">Login</a>
+              <li class="nav-item">
+                <a class="nav-link" href="../pages/login.html">Login</a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
     </header>
-    <main
-      class="d-flex flex-column justify-content-center align-items-center min-vh-100 loginContainer"
-    >
+
+    <main class="container">
       <h1 class="text-center">RECURSOS HUMANOS KUMELEN</h1>
-      <section class="w-100" style="max-width: 500px">
-        <div class="container p-4 shadow rounded bg-light">
-          <div class="text-center mb-4">
-            <img
-              src="../images/login.png"
-              alt="Login"
-              class="img-fluid"
-              style="max-width: 150px"
-            />
-          </div>
+      <h2 class="text-center my-3">CONTACTO Y SOPORTE</h2>
 
-          <div class="mb-3">
-            <label class="form-label" for="dni">DNI</label>
-            <input type="text" id="dni" class="form-control form-control-lg" />
+      <section class="row justify-content-center my-4">
+        <div class="col-md-8 col-lg-6">
+          <div class="contactContainer">
+            <form>
+              <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre completo</label>
+                <input type="text" class="form-control" id="nombre" required />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Correo electrónico</label>
+                <input type="email" class="form-control" id="email" required />
+              </div>
+              <div class="mb-3">
+                <label for="mensaje" class="form-label">Mensaje</label>
+                <textarea
+                  class="form-control"
+                  id="mensaje"
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-secondary">Enviar</button>
+              </div>
+            </form>
           </div>
+        </div>
+      </section>
 
-          <div class="mb-4">
-            <label class="form-label" for="typePasswordX">Contraseña</label>
-            <input
-              type="password"
-              id="typePasswordX"
-              class="form-control form-control-lg"
-            />
-          </div>
-
-          <div class="text-center">
-            <button type="button" class="btn btn-secondary btn-lg w-100">
-              Ingresar
-            </button>
-          </div>
+      <section class="row justify-content-center text-center my-5">
+        <div class="col-md-8">
+          <h3>Información de contacto</h3>
+          <p><strong>Correo:</strong> rrhh@kumelenescuela.edu.ar</p>
+          <p><strong>Teléfono:</strong> +54 9 351 2178916</p>
+          <p>
+            <strong>Horario de atención:</strong> Lunes a Viernes de 8 a 14 hs
+          </p>
         </div>
       </section>
     </main>
@@ -132,6 +131,7 @@
       </div>
     </footer>
 
+    <!-- Bootstrap JS -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
