@@ -3,6 +3,7 @@
 Este proyecto es una plataforma web desarrollada para la gestión de recursos humanos de la Escuela Kumelen. Está pensado para facilitar el acceso a formularios, noticias institucionales y gremiales, así como enlaces de uso frecuente.
 
 ## 🔗 Deploy del proyecto
+
 👉 Podés ver el proyecto en línea en: [rrhh-kumelen-blog-monaco.vercel.app](https://rrhh-kumelen-blog-monaco.vercel.app)
 
 ## 🛠️ Tecnologías utilizadas
@@ -10,7 +11,6 @@ Este proyecto es una plataforma web desarrollada para la gestión de recursos hu
 - HTML5
 - SCSS (SASS)
 - Bootstrap 5
-- JavaScript (mínimo)
 - Vercel (para el deploy)
 
 ## 🎯 Funcionalidades destacadas
@@ -27,9 +27,10 @@ Este proyecto es una plataforma web desarrollada para la gestión de recursos hu
 ```
 ├── index.html
 ├── pages/
-│   ├── news.html
-│   ├── attendance.html
-│   └── login.html
+│   ├── attendancenews.html
+│   ├── contact.html
+│   ├── login.html
+│   └── news.html
 ├── css/
 │   └── style.css
 ├── scss/
@@ -37,12 +38,6 @@ Este proyecto es una plataforma web desarrollada para la gestión de recursos hu
 ├── images/
 └── README.md
 ```
-
-## 💡 Mejoras posibles
-
-- Incorporar un backend para gestión dinámica de noticias y formularios.
-- Añadir un sistema de login con validación real.
-- Reforzar la estructura con rutas amigables y sistema de usuarios.
 
 ## 👨‍💻 Autor
 
